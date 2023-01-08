@@ -1,0 +1,141 @@
+:root {
+    --white-color: #FFF;
+    --black-color: #140A00;
+    --background-color: #3E4149;
+    --accent-color: #FF9999;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* NavBar */
+.navbar {
+    position: sticky;
+    top: -1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 1.5rem 1.75rem 0.5rem;
+}
+
+.navbar__logo {
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
+.navbar__logo i {
+    color: var(--accent-color);
+}
+
+.navbar__menu {
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding: 0.5rem 0.75rem;
+}
+
+.navbar__menu :hover {
+    background-color: var(--accent-color);
+    border-radius: 0.25rem;
+}
+
+.navbar__toggleBtn {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Video Player */
+.player {
+    text-align: center;
+    background-color: var(--black-color);
+}
+
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+/* Section */
+h1 {
+    font-size: 1.75rem;
+    color: var(--accent-color);
+    margin: auto;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    padding: 1em;
+}
+
+.component {
+    border: 1px solid var(--accent-color);
+    margin: 1em;
+}
+
+.title {
+    font-size: 1.5rem;
+    padding: 1em 1rem;
+    color: var(--white-color);
+    background-color: var(--accent-color);
+}
+
+.contents {
+    font-size: 1.125rem;
+    padding: 1em 1rem;
+    color: var(--background-color);
+}
+
+@media screen and (max-width: 48rem) {
+
+    /*navbar*/
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 1.75rem 1.5rem;
+    }
+
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar__toggleBtn {
+        display: block;
+    }
+
+    .navbar__menu.active {
+        display: flex;
+    }
+
+    /*section*/
+    .container {
+        flex-direction: column;
+    }
+}
